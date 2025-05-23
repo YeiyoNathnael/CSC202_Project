@@ -1,0 +1,4 @@
+Series,S1,Breaking Bad,Crime,9.5,47,5
+Series,S2,Stranger Things,Sci-fi,8.7,50,4
+Documentary,D1,Planet Earth,Nature,9.0,60,Nature and Wildlife
+Documentary,D2,The Last Dance,Sports,8.8,55,Basketball History
