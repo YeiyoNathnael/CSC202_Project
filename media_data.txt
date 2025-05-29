@@ -2,3 +2,6 @@ Series,S1,Breaking Bad,Crime,9.5,47,5
 Series,S2,Stranger Things,Sci-fi,8.7,50,4
 Documentary,D1,Planet Earth,Nature,9.0,60,Nature and Wildlife
 Documentary,D2,The Last Dance,Sports,8.8,55,Basketball History
+Documentary,D3,The Last Dancy,Sports,8.8,55,Basketball History
+Documentary,D4,The Last Dancing,Sports,8.8,55,Basketball History
+Documentary,D5,The Last Dancer,Sports,8.8,55,Basketball History
