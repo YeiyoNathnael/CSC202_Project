@@ -7,17 +7,15 @@ import java.util.*;
 public class RecommendationEngine {
     
 
-    // Static counter to track total recommendations generated across all users
     private static int totalRecommendationsGenerated = 0;
     
-    /**
-     * Generates personalized recommendations for a user based on their watch history
-     * @param user The user to generate recommendations for
-     * @param library The media library to search through
-     * @param minRating Minimum rating filter for recommendations
-     * @param maxDuration Maximum duration filter for recommendations
-     * @return List of recommended media items
-     */
+    
+     // Generates personalized recommendations for a user based on their watch history
+        // Build watched items list and genre preferences using only ArrayList
+          // If user has no watch history, recommend highest rated items
+           // Generate recommendations based on genre preferences
+             // Sort recommendations by rating (highest first) using ArrayList's sort method
+    
     public static ArrayList<Media> generateRecommendations(User user, MediaLibrary library, 
                                                      double minRating, int maxDuration) {
         if (user == null || library == null) {
@@ -29,7 +27,7 @@ public class RecommendationEngine {
         ArrayList<String> watchedIds = new ArrayList<>();
         ArrayList<String> userGenres = new ArrayList<>();
         
-        // Build watched items list and genre preferences using only ArrayList
+    
         for (Media watchedItem : watchHistory) {
             watchedIds.add(watchedItem.getId());
             String genre = watchedItem.getGenre();
@@ -38,19 +36,19 @@ public class RecommendationEngine {
             }
         }
         
-        // If user has no watch history, recommend highest rated items
+
         if (watchHistory.isEmpty()) {
             return getTopRatedMedia(library, minRating, maxDuration, 5);
         }
         
-        // Generate recommendations based on genre preferences
+       
         for (Media media : library.getAllMedia()) {
             if (shouldRecommend(media, watchedIds, userGenres, minRating, maxDuration)) {
                 recommendations.add(media);
             }
         }
         
-        // Sort recommendations by rating (highest first) using ArrayList's sort method
+      
         recommendations.sort((m1, m2) -> Double.compare(m2.getRating(), m1.getRating()));
         
         totalRecommendationsGenerated += recommendations.size();
@@ -63,17 +61,11 @@ public class RecommendationEngine {
     private static boolean shouldRecommend(Media media, ArrayList<String> watchedIds, 
                                          ArrayList<String> userGenres, 
                                          double minRating, int maxDuration) {
-        // Don't recommend already watched items
-        if (watchedIds.contains(media.getId())) {
-            return false;
-        }
         
-        // Check rating and duration filters
         if (media.getRating() < minRating || media.getDuration() > maxDuration) {
             return false;
         }
-        
-        // Check if genre matches user preferences
+
         return userGenres.contains(media.getGenre());
     }
     
@@ -104,7 +96,7 @@ public class RecommendationEngine {
     
     /**
      * Static method to get total recommendations generated across all users
-     * @return Total number of recommendations generated
+     * Total number of recommendations generated
      */
     public static int getTotalRecommendationsGenerated() {
         return totalRecommendationsGenerated;
@@ -119,8 +111,8 @@ public class RecommendationEngine {
     
     /**
      * Utility method to analyze user's genre distribution using only ArrayList
-     * @param user The user to analyze
-     * @return ArrayList of genre strings (duplicates indicate frequency)
+     *  The user to analyze
+     *  ArrayList of genre strings (duplicates indicate frequency)
      */
     public static ArrayList<String> analyzeUserGenrePreferences(User user) {
         ArrayList<String> genreList = new ArrayList<>();

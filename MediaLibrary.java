@@ -1,5 +1,3 @@
-
-
 import java.io.*; // for file output and input (BufferedReader, FileReader)
 import java.util.*; // for arraylist , list , and collection
 
@@ -41,7 +39,6 @@ public class MediaLibrary {
                 }
                 
                 String type = tokens[0].trim();         // Get the media type (e.g., Series)
-                
                 try {
                     // Depending on the type, construct the correct object
                     switch (type) {
@@ -67,11 +64,23 @@ public class MediaLibrary {
                                     Integer.parseInt(tokens[5].trim()),  //Duration
                                     tokens[6].trim()));  //Topic or subject
                             break;
+                        case "Movie":
+                            if (tokens.length < 7) {
+                                throw new InvalidMediaDataException(
+                                    "Line " + lineNumber + ": Movie requires 7 fields (Type,ID,Title,Genre,Rating,Duration,Director)");
+                            }
+                            addMedia(new Movie(
+                                    tokens[1].trim(),   //ID
+                                    tokens[2].trim(),   //Title
+                                    tokens[3].trim(),   //Genre
+                                    Double.parseDouble(tokens[4].trim()), //Rating
+                                    Integer.parseInt(tokens[5].trim()),   //Duration
+                                    tokens[6].trim()));  //Director
+                            break;
                         default:
                             throw new InvalidMediaDataException(
-                                "Line " + lineNumber + ": Unknown media type '" + type + "'. Expected 'Series' or 'Documentary'");
-                    }
-                } catch (NumberFormatException e) {
+                                "Line " + lineNumber + ": Unknown media type '" + type + "'. Expected 'Series', 'Documentary', or 'Movie'");
+                    }  } catch (NumberFormatException e) {
                     throw new InvalidMediaDataException(
                         "Line " + lineNumber + ": Invalid number format in data: " + e.getMessage(), e);
                 } catch (IllegalArgumentException e) {

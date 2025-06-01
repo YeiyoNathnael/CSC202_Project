@@ -5,9 +5,9 @@
 import java.util.Objects;
 
 public abstract class Media implements Comparable<Media> {
-    // The minimum allowed rating value (0.0 = worst)
+  
     private static final double MIN_RATING = 0.0;
-    // The maximum allowed rating value (10.0 = best)
+  
     private static final double MAX_RATING = 10.0;
     
     private String id;
@@ -21,7 +21,7 @@ public abstract class Media implements Comparable<Media> {
         this.id = id;
         this.title = title;
         this.genre = genre;
-        setRating(rating);  // Uses special rating validator
+        setRating(rating);  
         this.duration = duration;
     }
 

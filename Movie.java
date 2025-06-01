@@ -5,7 +5,7 @@ import java.util.Objects;
 // Concrete class representing a Movie, which is a specific type of Media
 // Inherits from Media and adds movie  properties
  
-public class Movie extends Media {
+public class Movie extends Media implements Playable{
     private String director;  
 
     public Movie(String id, String title, String genre, double rating, int duration, String director) {
@@ -61,5 +61,8 @@ public class Movie extends Media {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), director);
+    }
+     public void play() {
+        System.out.println("Playing Movie: " + getTitle());
     }
 }

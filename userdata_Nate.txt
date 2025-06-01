@@ -1,9 +1,0 @@
-USER_DATA
-Username:Nate
-UserId:User1
-WatchHistory:
-Documentary,D2,The Last Dance,Sports,8.8,55,Basketball History
-Documentary,D2,The Last Dancer,Sports,8.8,55,Basketball History
-Documentary,D2,The Last Dance,Sports,8.8,55,Basketball History
-Documentary,D5,The Last Dancer,Sports,8.8,55,Basketball History
-Documentary,D5,The Last Dancer,Sports,8.8,55,Basketball History

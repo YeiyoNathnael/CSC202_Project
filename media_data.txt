@@ -1,7 +1,30 @@
 Series,S1,Breaking Bad,Crime,9.5,47,5
 Series,S2,Stranger Things,Sci-fi,8.7,50,4
+Series,S3,Game of Thrones,Fantasy,9.3,60,8
+Series,S4,The Crown,Drama,8.6,58,5
+Series,S5,Dark,Mystery,8.8,60,3
+Series,S6,Money Heist,Action,8.3,45,5
+Series,S7,Friends,Comedy,8.9,22,10
+Series,S8,The Witcher,Fantasy,8.2,60,2
+Series,S9,Narcos,Crime,8.8,50,3
+Series,S10,The Office,Comedy,8.9,22,9
 Documentary,D1,Planet Earth,Nature,9.0,60,Nature and Wildlife
 Documentary,D2,The Last Dance,Sports,8.8,55,Basketball History
-Documentary,D3,The Last Dancy,Sports,8.8,55,Basketball History
-Documentary,D4,The Last Dancing,Sports,8.8,55,Basketball History
-Documentary,D5,The Last Dancer,Sports,8.8,55,Basketball History
+Documentary,D3,Making a Murderer,Crime,8.6,60,Criminal Justice
+Documentary,D4,Our Planet,Nature,9.3,50,Environmental Conservation
+Documentary,D5,Tiger King,True Crime,7.5,45,Exotic Animals
+Documentary,D6,The Social Dilemma,Technology,8.0,94,Social Media Impact
+Documentary,D7,Free Solo,Adventure,8.2,100,Rock Climbing
+Documentary,D8,My Octopus Teacher,Nature,8.1,85,Marine Life
+Documentary,D9,13th,Social Issues,8.3,100,Criminal Justice Reform
+Documentary,D10,Blackfish,Nature,8.1,83,Marine Animals in Captivity
+Documentary,D11,Chef's Table,Food,8.5,50,Culinary Arts
+Documentary,D12,Formula 1: Drive to Survive,Sports,8.6,40,Motorsports
+Documentary,D13,Wild Wild Country,Religion,8.2,65,Cult History
+Documentary,D14,Icarus,Sports,8.0,121,Doping in Sports
+Documentary,D15,The Keepers,True Crime,8.1,60,Cold Case Investigation
+Movie,M1,The Shawshank Redemption,Drama,9.3,142,Frank Darabont
+Movie,M2,Inception,Sci-fi,8.8,148,Christopher Nolan
+Movie,M3,Pulp Fiction,Crime,8.9,154,Quentin Tarantino
+Movie,M4,The Dark Knight,Action,9.0,152,Christopher Nolan
+Movie,M5,Parasite,Thriller,8.6,132,Bong Joon-ho

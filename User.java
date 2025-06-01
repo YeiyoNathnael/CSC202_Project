@@ -56,8 +56,8 @@ public class User {
     
     /**
      * Exports the user's watch history to a text file
-     * @param filename The name of the file to write to
-     * @throws IOException If there's an error writing to the file
+     *  filename The name of the file to write to
+     * throws IOException If there's an error writing to the file
      */
     public void exportWatchHistory(String filename) throws IOException {
         try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
@@ -82,11 +82,11 @@ public class User {
     
     /**
      * Exports personalized recommendations to a text file
-     * @param recommendations List of recommended media items
-     * @param filename The name of the file to write to
-     * @param minRating The minimum rating filter used
-     * @param maxDuration The maximum duration filter used
-     * @throws IOException If there's an error writing to the file
+     *  recommendations List of recommended media items
+     *  filename The name of the file to write to
+     *  minRating The minimum rating filter used
+     *  maxDuration The maximum duration filter used
+     * throws IOException If there's an error writing to the file
      */
     public void exportRecommendations(ArrayList<Media> recommendations, String filename, 
                                     double minRating, int maxDuration) throws IOException {
@@ -117,10 +117,10 @@ public class User {
     
     /**
      * Gets personalized recommendations using the RecommendationEngine
-     * @param library The media library to search through
-     * @param minRating Minimum rating filter
-     * @param maxDuration Maximum duration filter
-     * @return List of recommended media items
+     *  library The media library to search through
+     *  minRating Minimum rating filter
+     *  maxDuration Maximum duration filter
+     * returns List of recommended media items
      */
     public ArrayList<Media> getRecommendations(MediaLibrary library, double minRating, int maxDuration) {
         return RecommendationEngine.generateRecommendations(this, library, minRating, maxDuration);
